@@ -51,6 +51,7 @@ about:
   license_file: LICENSE
   license_file: LICENSE
   license_file: LICENSE
+  license_file: LICENSE
   summary: 'A set of tools that solves a common set of problems: you need to break a big problem
     down into manageable pieces, operate on each piece and then put all the pieces back
     together.  For example, you might want to fit a model to each spatial location or
