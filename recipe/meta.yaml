@@ -49,13 +49,6 @@ about:
   home: http://had.co.nz/plyr, https://github.com/hadley/plyr
   license: MIT
   license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
-  license_file: LICENSE
   summary: 'A set of tools that solves a common set of problems: you need to break a big problem
     down into manageable pieces, operate on each piece and then put all the pieces back
     together.  For example, you might want to fit a model to each spatial location or
@@ -67,8 +60,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
