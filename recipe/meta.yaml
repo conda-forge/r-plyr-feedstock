@@ -1,4 +1,4 @@
-{% set version = "1.8.5" %}
+{% set version = "1.8.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,10 +11,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plyr/plyr_{{ version }}.tar.gz
-  sha256: ea008c59a4a7211a09dfc2e4f25d286fc109424c17f01671f72aec97c75a9574
+  sha256: ea55d26f155443e9774769531daa5d4c20a0697bb53abd832e891b126c935287
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -49,12 +49,9 @@ about:
   home: http://had.co.nz/plyr, https://github.com/hadley/plyr
   license: MIT
   license_file: LICENSE
-  summary: 'A set of tools that solves a common set of problems: you need to break a big problem
-    down into manageable pieces, operate on each piece and then put all the pieces back
-    together.  For example, you might want to fit a model to each spatial location or
-    time point in your study, summarise data by panels or collapse high-dimensional
-    arrays to simpler summary statistics. The development of ''plyr'' has been generously
-    supported by ''Becton Dickinson''.'
+  summary: "A set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all\
+    \ the pieces back together.  For example, you might want to fit a model to each spatial location or time point in your study, summarise data by panels or collapse\
+    \ high-dimensional arrays to simpler summary statistics. The development of 'plyr' has been generously supported by 'Becton Dickinson'."
   license_family: MIT
 
 extra:
