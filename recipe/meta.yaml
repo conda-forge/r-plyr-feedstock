@@ -6,15 +6,13 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: plyr_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/plyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plyr/plyr_{{ version }}.tar.gz
   sha256: 15b5e7f711d53bf41b8687923983b8ef424563aa2f74c5195feb5b1df1aee103
 
 build:
-  number: 1
-  skip: true  # [win32]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,7 +26,7 @@ requirements:
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ stdlib("m2w64_c") }}          # [win]
-    - {{ compiler('m2w64_cxx') }}        # [win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -49,10 +47,12 @@ test:
 about:
   home: http://had.co.nz/plyr, https://github.com/hadley/plyr
   license: MIT
-  license_file: LICENSE
   summary: "A set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all the pieces back together.  For example, you might want to fit a model to each spatial location or time point in your study, summarise data by panels or collapse
     high-dimensional arrays to simpler summary statistics. The development of 'plyr' has been generously supported by 'Becton Dickinson'."
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
